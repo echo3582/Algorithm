@@ -6,7 +6,7 @@
 function levelOrder(root) {
   let result = []
   let queue = [root]
-  while(root && queue.length !== 0) {
+  while(root && queue.length) {
     let node = queue.shift()
     result.push(node.val)
     if (node.left) {
@@ -19,5 +19,5 @@ function levelOrder(root) {
   return result
 }
 
-console.log(levelOrder(root));
+console.log(levelOrder(root)); // [3, 9, 20, 15, 7]
 console.log(levelOrder(null))
